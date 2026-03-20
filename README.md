@@ -1,67 +1,77 @@
-Loan Default Prediction
+Loan Default Prediction (Machine Learning Project)
 
 Project Overview:
 
-This project predicts whether loan applicants will default using their personal, financial, and credit history information. It helps lenders identify high-risk borrowers and make informed decisions.
+This project develops a machine learning model to predict whether loan applicants will default using personal, financial, and credit history data. The goal is to help lenders identify high-risk borrowers and make informed, data-driven decisions.
 
 Objectives:
 
-•	Detect high-risk loan applicants before approval.
+Detect high-risk loan applicants before approval
 
-•	Understand key factors contributing to loan defaults.
+Understand key factors contributing to loan default
 
-•	Provide actionable business insights for risk management.
+Provide actionable insights for risk management
 
-•	Establish a baseline predictive model and evaluate performance.
+Build and evaluate a predictive model
 
 Dataset:
 
-•	Numerical Features: person_age, person_income, person_emp_length, loan_amnt, loan_int_rate, loan_percent_income, cb_person_cred_hist_length
+Dataset size: 32,581 observations
 
-•	Categorical Features: person_home_ownership, loan_intent, loan_grade, cb_person_default_on_file
+Numerical Features: person_age, person_income, person_emp_length, loan_amnt, loan_int_rate, loan_percent_income, cb_person_cred_hist_length
 
-•	Target Variable: loan_status (0 = Non-default, 1 = Default)
+Categorical Features: person_home_ownership, loan_intent, loan_grade, cb_person_default_on_file
+
+Target Variable: loan_status (0 = Non-default, 1 = Default)
 
 Methodology:
 
-1.	Data Cleaning & Preprocessing:
-   
-    o	Fill missing values and remove duplicates.
+Data Cleaning & Preprocessing:
 
-    o	Encode categorical variables and scale numerical features.
+Fill missing values and remove duplicates
 
-2.	Exploratory Data Analysis (EDA):
-   
-    o	Visualize distributions of numerical and categorical features.
+Encode categorical variables and scale numerical features
 
-    o	Examine correlations, outliers, and multicollinearity (VIF analysis).
+Exploratory Data Analysis (EDA):
 
-    o	Identify key drivers of loan default.
+Visualise distributions of numerical and categorical features
 
-3.	Modeling:
-   
-    o	Train baseline Logistic Regression model.
+Examine correlations, outliers, and multicollinearity (VIF analysis)
 
-    o	Address class imbalance using class weighting.
+Identify key drivers of loan default
 
-    o	Adjust decision threshold to improve default detection.
+Modeling:
 
-4.	Evaluation:
-   
-    o	Metrics: Accuracy, Precision, Recall, F1-score.
+Train baseline Logistic Regression model
 
-    o	Confusion matrix visualization.
+Address class imbalance using class weighting
 
-    o	Threshold tuning improved recall for defaulters from 0.57 → 0.72.
+Apply threshold tuning (0.50 → 0.30) to improve detection of defaulters
+
+Evaluation:
+
+Metrics: Accuracy, Precision, Recall, F1-score
+
+Achieved ~87% accuracy on test data
+
+Confusion matrix visualisation
+
+Threshold tuning improved recall for defaulters from 0.57 → 0.72
 
 Key Insights:
 
-o	Lower income and higher loan-to-income ratio increase default risk.
+Lower income and higher loan-to-income ratio increase default risk
 
-o	Renters and certain loan intents (medical, debt consolidation) are more likely to default.
+Renters and certain loan intents (medical, debt consolidation) are more likely to default
 
-o	Larger loan amounts are correlated with higher default probability.
+Larger loan amounts are correlated with higher default probability
 
-o	Threshold adjustment improves detection of high-risk borrowers.
+Threshold adjustment improves detection of high-risk borrowers, with a trade-off in precision and overall accuracy
 
+Business Impact:
 
+Enables proactive identification of high-risk borrowers
+
+Supports data-driven credit approval decisions
+
+Helps reduce financial losses from loan defaults
